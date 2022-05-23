@@ -43,6 +43,7 @@ button {
     font-size: 50px;
     background-color: #615873;
     color: white;
+    font-weight: bold;
 }
 
 .reset {
