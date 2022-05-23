@@ -1,0 +1,74 @@
+.device {
+    width: 500px;
+    height: 500px;
+}
+
+.monitor {
+    width: 100%;
+    height: 20%;
+    background: #31204c;
+    border-right: 1px;
+}
+
+.panel {
+    height: 80%;
+    border: 1px solid black;
+}
+
+.firstFunctions,.secondFunctions, .thirdFunctions, .fourthFunctions, .fifthFunctions {
+    height: 20%;
+}
+
+button {
+    float: left;
+    border: 1px solid black;
+    width: 25%;
+    height: 100%;
+    background-color: #615873;
+}
+
+.zero {
+    width: 50%;
+}
+
+.equals, .plus, .minus, .multiplication, .division {
+    background-color: #ff9f0c;
+}
+
+.negative {
+    background: #45375b url("/image/negative.png") no-repeat center;
+}
+
+.reset, .zero, .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .comma {
+    font-size: 50px;
+    background-color: #615873;
+    color: white;
+}
+
+.reset {
+    background-color: #45375b;
+}
+
+.percent {
+    background: #45375b url("/image/precent.png") no-repeat center;
+}
+
+.division {
+    background: #ff9f0c url("/image/division.png") no-repeat center;
+}
+
+.multiplication {
+    background: #ff9f0c url("/image/multiplication.png") no-repeat center;
+}
+
+.minus {
+    background: #ff9f0c url("/image/minus.png") no-repeat center;
+}
+
+.plus {
+    background: #ff9f0c url("/image/plus.png") no-repeat center;
+}
+
+.equals {
+    background: #ff9f0c url("/image/equals.png") no-repeat center;
+}
