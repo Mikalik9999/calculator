@@ -9,39 +9,42 @@
 <h1>Калькулятор</h1>
 <h2>Введите значения и получите ответ</h2>
 <div class ='device'>
-    <div class="monitor"></div>
-    <div class="panel">
+    <div class="monitor">
+        <input type="text" id = "input" size="40">
+    </div>
+    <div class="panel" id = "panel">
         <div class="firstFunctions">
-            <button class="reset"> AC </button>
-            <button class="negative"> </button>
-            <button class="percent"> </button>
-            <button class="division"> </button>
+            <button id="reset"> AC </button>
+            <button id="negative"> +/- </button>
+            <button id="percent"> % </button>
+            <button id="division"> / </button>
         </div>
         <div class="secondFunctions">
-            <button class="seven">7</button>
-            <button class="eight">8</button>
-            <button class="nine">9</button>
-            <button class="multiplication"></button>
+            <button id="seven">7</button>
+            <button id="eight">8</button>
+            <button id="nine">9</button>
+            <button id="multiplication"> * </button>
         </div>
         <div class="thirdFunctions">
-            <button class="four">4</button>
-            <button class="five">5</button>
-            <button class="six">6</button>
-            <button class="minus"></button>
+            <button id="four">4</button>
+            <button id="five">5</button>
+            <button id="six">6</button>
+            <button id="subtract"> - </button>
         </div>
         <div class="fourthFunctions">
-            <button class="one">1</button>
-            <button class="two">2</button>
-            <button class="three">3</button>
-            <button class="plus"></button>
+            <button id="one">1</button>
+            <button id="two">2</button>
+            <button id="three">3</button>
+            <button id="plus"> + </button>
         </div>
         <div class="fifthFunctions">
-            <button class="zero">0</button>
-            <button class="comma">,</button>
-            <button class="equals"></button>
+            <button id="zero">0</button>
+            <button id="comma">,</button>
+            <button id="equals"> = </button>
         </div>
     </div>
 
 </div>
+<script src="calculator.js"></script>
 </body>
 </html>
