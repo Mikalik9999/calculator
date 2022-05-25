@@ -19,34 +19,43 @@ panel.addEventListener('click',(event) => {
         return;
     }
     if (btn === '.') {
+        if (arrayOperation.includes(lastSymbol)) {
+            return;
+        }
         if (lastSymbol === '.') {
             return;
         }
         if (input.value.indexOf("+") !== -1) {
-            if (input.value.slice(input.value.indexOf("+")).includes(".") !== false) {
+            if (input.value.slice(input.value.indexOf("+")).includes(".") ) {
                 return
             }
         } else if (input.value.includes('.') === true) {
             return;
         }
         if (input.value.indexOf("-") !== -1) {
-            if (input.value.slice(input.value.indexOf("+")).includes(".") !== false) {
+            if (input.value.slice(input.value.indexOf("+")).includes(".") ) {
                 return
             }
         }
         if (input.value.indexOf("/") !== -1) {
-            if (input.value.slice(input.value.indexOf("+")).includes(".") !== false) {
+            if (input.value.slice(input.value.indexOf("+")).includes(".") ) {
                 return
             }
         }
         if (input.value.indexOf("*") !== -1) {
-            if (input.value.slice(input.value.indexOf("+")).includes(".") !== false) {
+            if (input.value.slice(input.value.indexOf("+")).includes(".") ) {
                 return
             }
         }
     }
     if (btn === '%') {
-        input.value = '';
+        if (arrayOperation.includes(lastSymbol)) {
+            return;
+        }
+        if (input.value.indexOf("+") !== -1) {
+            input.value.replace('input.value.slice(input.value.indexOf("+"))','(input.value.slice(input.value.indexOf("+")))/100)')
+            }
+        input.value = input.value/100;
         return;
     }
     input.value = input.value + btn;
