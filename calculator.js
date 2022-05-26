@@ -11,8 +11,8 @@ panel.addEventListener('click',(event) => {
         return;
     }
 
-    if ((check() === false) && ((arrayOperation.includes(btn)) === true)) {
-        input.value = eval(input.value);
+    if (!checkOperation() && arrayOperation.includes(btn)) {
+        input.value = eval(input.value) + btn;
         return;
     }
 
@@ -32,8 +32,6 @@ panel.addEventListener('click',(event) => {
             return;
         }
         let checkFlag = checkDots();
-        console.log(checkDots())
-        console.log(checkFlag);
         if (checkFlag) {
             return;
         }
@@ -62,7 +60,7 @@ function checkDots () {
     });
 }
 
-function check () {
+function checkOperation () {
     return arrayOperation.every((e) => {
         return input.value.indexOf(e) === -1;
     });
