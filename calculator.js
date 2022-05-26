@@ -25,36 +25,47 @@ panel.addEventListener('click',(event) => {
         if (lastSymbol === '.') {
             return;
         }
-        if (input.value.indexOf("+") !== -1) {
-            if (input.value.slice(input.value.indexOf("+")).includes(".") ) {
-                return
+        arrayOperation.forEach((e) => {
+            console.log(input.value.indexOf(e) !== -1);
+            if (input.value.indexOf(e) !== -1) { // проверка на нахождение знака (узнаем позицию)
+                console.log(input.value.slice(input.value.indexOf(e)).includes("."));
+                if (input.value.slice(input.value.indexOf(e)).includes(".")) { // (берем строку после знака
+                                                                                // и проверяем, есть ли точка
+                    console.log(input.value);
+                    return input.value;
+                }
+                } else if (input.value.includes('.')) {
+                return;
             }
-        } else if (input.value.includes('.') === true) {
-            return;
-        }
-        if (input.value.indexOf("-") !== -1) {
-            if (input.value.slice(input.value.indexOf("+")).includes(".") ) {
-                return
-            }
-        }
-        if (input.value.indexOf("/") !== -1) {
-            if (input.value.slice(input.value.indexOf("+")).includes(".") ) {
-                return
-            }
-        }
-        if (input.value.indexOf("*") !== -1) {
-            if (input.value.slice(input.value.indexOf("+")).includes(".") ) {
-                return
-            }
-        }
+        })
+
+        // if (input.value.indexOf("+") !== -1) { //сократить при помощи forEach
+        //     if (input.value.slice(input.value.indexOf("+")).includes(".") ) {
+        //         return
+        //     }
+        // } else if (input.value.includes('.')) {
+        //     return;
+        // }
+        // if (input.value.indexOf("-") !== -1) {
+        //     if (input.value.slice(input.value.indexOf("+")).includes(".") ) {
+        //         return
+        //     }
+        // }
+        // if (input.value.indexOf("/") !== -1) {
+        //     if (input.value.slice(input.value.indexOf("+")).includes(".") ) {
+        //         return
+        //     }
+        // }
+        // if (input.value.indexOf("*") !== -1) {
+        //     if (input.value.slice(input.value.indexOf("+")).includes(".") ) {
+        //         return
+        //     }
+        // }
     }
     if (btn === '%') {
         if (arrayOperation.includes(lastSymbol)) {
             return;
         }
-        if (input.value.indexOf("+") !== -1) {
-            input.value.replace('input.value.slice(input.value.indexOf("+"))','(input.value.slice(input.value.indexOf("+")))/100)')
-            }
         input.value = input.value/100;
         return;
     }
